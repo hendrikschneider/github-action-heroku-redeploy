@@ -1,0 +1,16 @@
+# action.yaml
+name: 'Rebuild Heroku Application'
+description: 'This is is a simple action that will trigger a redeploy of your current application.'
+inputs:
+  HEROKU_APP_NAME:
+    description: 'Heroku app name'
+    required: true
+  HEROKU_APHEROKU_API_KEY:
+    description: 'heroku api key'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.HEROKU_APP_NAME}}
+    - ${{ inputs.HEROKU_APHEROKU_API_KEY}}
