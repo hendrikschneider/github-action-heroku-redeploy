@@ -5,12 +5,12 @@ inputs:
   HEROKU_APP_NAME:
     description: 'Heroku app name'
     required: true
-  HEROKU_APHEROKU_API_KEY:
+  HEROKU_API_KEY:
     description: 'heroku api key'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.HEROKU_APP_NAME}}
-    - ${{ inputs.HEROKU_APHEROKU_API_KEY}}
+    - ${{ inputs.HEROKU_APP_NAME }}
+    - ${{ inputs.HEROKU_API_KEY }}
