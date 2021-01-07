@@ -2,11 +2,11 @@
 Github action to rebuild a deployed heroku app.
 
 # Usage:
-1) Set Github secrets:
-    - HEROKU_APP_NAME
+1) Create API token: https://devcenter.heroku.com/articles/platform-api-quickstart#authentication
+2) Set Github secret:
     - HEROKU_API_KEY
     
-2) Add workflow:
+3) Add workflow:
 ```
 on: [push]
 
