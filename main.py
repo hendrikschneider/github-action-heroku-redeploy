@@ -74,8 +74,6 @@ if __name__ == "__main__":
     APP_NAME = os.environ.get("INPUT_HEROKU_APP_NAME", None)
     API_KEY = os.environ.get("INPUT_HEROKU_API_KEY", None)
 
-    print(APP_NAME, API_KEY)
-
     all_settings_set = APP_NAME is not None and API_KEY is not None
     if all_settings_set:
         slug_id = get_latest_slug(APP_NAME, API_KEY)
